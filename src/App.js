@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import {SectionWrapper} from './components'
+import headermockup from './assets/headermockup.png'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <SectionWrapper
+      title="Ofrece y busca servicios para el mantenimiento del hogar de manera rapida, facil y confiable"
+      description="Seas Cliente o Profesional proba nuestra aplicacion y olvidate tener que pedir recomendaciones a todos tu conocidos"
+      showBtn
+      mockupImg={headermockup}
+      banner="banner"
+      />
+    </>
   );
 }
 
