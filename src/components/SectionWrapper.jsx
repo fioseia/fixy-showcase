@@ -9,7 +9,7 @@ const SectionWrapper = ({ title, description, showBtn, mockupImg, banner }) => {
 			className={`min-h-screen ${styles.section} ${styles.bgWhite} ${banner}`}
 		>
 			<div className={`flex items-center ${styles.boxClass}`}>
-				<div className={`${styles.descDiv} fadeLeftMini`}>
+				<div className={`${styles.descDiv} fadeLeftMini flex flex-col justify-center items-center`}>
 					<h1 className={`${styles.h1Text}`}>{title}</h1>
 					<p className={`${styles.descriptionText}`}>{description}</p>
 					{showBtn && (
