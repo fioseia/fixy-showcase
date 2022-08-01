@@ -9,13 +9,15 @@ const SectionWrapper = ({ title, description, showBtn, mockupImg, banner }) => {
 			className={`min-h-screen ${styles.section} ${styles.bgWhite} ${banner}`}
 		>
 			<div className={`flex items-center ${styles.boxClass}`}>
-				<div className={`${styles.descDiv} fadeLeftMini flex flex-col justify-center items-center`}>
+				<div
+					className={`${styles.descDiv} fadeLeftMini flex flex-col justify-center items-center`}
+				>
 					<h1 className={`${styles.h1Text}`}>{title}</h1>
 					<p className={`${styles.descriptionText}`}>{description}</p>
 					{showBtn && (
 						<Button
 							assetUrl={android}
-							link='https://expo.dev/artifacts/89f11502-71db-4055-8cac-d19ab6e9205e'
+							link='https://expo.dev/artifacts/30a18922-72ad-4c33-93e5-040d163ba54f'
 						/>
 					)}
 				</div>
