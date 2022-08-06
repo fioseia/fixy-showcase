@@ -5,20 +5,18 @@ import Widget from './Widget'
 
 function Dashboard() {
   return (
-      <>
+    <>
       <div className={styles.dashboard}>
         <SideBar />
         <div className={styles.dashboardContainer}>
-          <h1>Dashboard</h1>
           <div className={styles.widgets}>
-            <Widget />
-            <Widget />
-            <Widget />
-            <Widget />
+            <Widget type={"users"}/>
+            <Widget type={"clients"}/>
+            <Widget type={"professionals"}/>
           </div>
         </div>
       </div>
-      </>  
+    </>  
   )
 }
 

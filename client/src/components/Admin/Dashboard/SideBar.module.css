@@ -37,6 +37,7 @@ li{
     display: flex;
     align-items: center;
     cursor: pointer;
+    padding: 1rem;
 }
 
 li:hover{
@@ -47,10 +48,10 @@ span {
     font-size: 15px;
     font-weight: 600;
     color: #333;
-    padding: 1rem;
 }
 
 .icon {
     font-size: 18px;
     color: #493d8a;
+    margin-right: 10px;
 }

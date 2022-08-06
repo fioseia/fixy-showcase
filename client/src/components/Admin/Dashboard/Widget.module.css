@@ -3,11 +3,12 @@
     justify-content: space-between;
     flex: 1;
     padding: 10px;
-    box-shadow: 2px 4px 10px 1px rgba(163, 161, 161, 0.75);
-    -webkit-box-shadow: 2px 4px 10px 1px rgba(163, 161, 161, 0.75);
-    -moz-box-shadow: 2px 4px 10px 1px rgba(163, 161, 161, 0.75);
+    box-shadow: 11px 10px 0px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 11px 10px 0px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 11px 10px 0px 0px rgba(0,0,0,0.75);
     border-radius: 10px;
-    height: 100px;
+    border: 1px solid #666;
+    min-height: max-content;
 }
 
 .left, .right{
@@ -19,7 +20,7 @@
 .title {
     font-size: 14px;
     font-weight: bold;
-    color: rgba(163, 161, 161, 0.75);
+    color: #666;
 }
 
 .counter {
@@ -39,10 +40,18 @@
     font-size: 14px;
 }
 
-.percentage.green {
+.percentagePositive {
     color: green;
 }
 
-.percentage.red {
+.percentageNegative {
     color: red;
+}
+
+.icon {
+    font-size: 18px;
+    padding: 5px;
+    background-color: blue;
+    border-radius: 5px;
+    align-self: flex-end;
 }

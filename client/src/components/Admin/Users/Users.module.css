@@ -1,0 +1,23 @@
+.users {
+    display: flex;
+}
+
+.usersContainer {
+    flex: 6;
+}
+
+.status {
+    padding: 5px;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.active{
+    color: green;
+    background-color: rgba(0, 128, 0, 0.247);
+}
+
+.inactive{
+    color: red;
+    background-color: rgba(255, 0, 0, 0.247);
+}
