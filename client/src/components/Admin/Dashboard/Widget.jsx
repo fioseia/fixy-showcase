@@ -4,6 +4,7 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import PersonIcon from '@mui/icons-material/Person';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllClients, getAllProfessionals } from '../../../redux/actions';
+import { Link } from 'react-router-dom';
 
 function Widget({type}) {
 
@@ -16,7 +17,7 @@ function Widget({type}) {
     useEffect(() => {
         dispatch(getAllClients())
         dispatch(getAllProfessionals())
-    } , [])
+    } , []) // eslint-disable-line react-hooks/exhaustive-deps
 
     let data;
 
@@ -25,7 +26,7 @@ function Widget({type}) {
             data = {
                 title: 'USERS',
                 value: users.length,
-                link: 'See all users',
+                link: (<Link to="/admin/users">See all users</Link>),
                 icon: (<PersonIcon className={styles.icon} />)
             }
             break;
@@ -42,6 +43,30 @@ function Widget({type}) {
                 title: 'PROFESSIONALS',
                 value: professionals.length,
                 link: 'See all professionals',
+                icon: (<PersonIcon className={styles.icon} />)
+            }
+            break;
+        case 'electricista':
+            data = {
+                title: 'ELECTRICISTAS',
+                value: professionals.filter(professional => professional.profession === 'electricista').length,
+                link: 'See all electricistas',
+                icon: (<PersonIcon className={styles.icon} />)
+            }
+            break;
+        case 'gasista':
+            data = {
+                title: 'GASISTAS',
+                value: professionals.filter(professional => professional.profession === 'gasista').length,
+                link: 'See all gasistas',
+                icon: (<PersonIcon className={styles.icon} />)
+            }
+            break;
+        case 'plomero':
+            data = {
+                title: 'PLOMEROS',
+                value: professionals.filter(professional => professional.profession === 'plomero').length,
+                link: 'See all plomeros',
                 icon: (<PersonIcon className={styles.icon} />)
             }
             break;

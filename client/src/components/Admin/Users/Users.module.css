@@ -12,12 +12,32 @@
     justify-content: center;
 }
 
+.row{
+    text-align: center;
+}
+
 .active{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-radius: 10px;
     color: green;
     background-color: rgba(0, 128, 0, 0.247);
 }
 
 .inactive{
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    width: 100%;
     color: red;
     background-color: rgba(255, 0, 0, 0.247);
+}
+
+.divIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 5px;
 }

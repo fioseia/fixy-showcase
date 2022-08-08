@@ -14,6 +14,11 @@ function Dashboard() {
             <Widget type={"clients"}/>
             <Widget type={"professionals"}/>
           </div>
+          <div className={styles.widgets}>
+            <Widget type={"electricista"}/>
+            <Widget type={"gasista"}/>
+            <Widget type={"plomero"}/>
+          </div>
         </div>
       </div>
     </>  

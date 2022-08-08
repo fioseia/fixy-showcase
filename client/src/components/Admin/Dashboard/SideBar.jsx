@@ -37,7 +37,7 @@ function SideBar() {
                 <span>Reports</span>
             </li>
           </Link>
-          <Link to="/admin/logout">
+          <Link to="/admin/login">
             <li>
                 <LogoutIcon className={styles.icon} />
                 <span>Logout</span>

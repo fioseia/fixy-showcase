@@ -1,13 +1,48 @@
-import { GET_ALL_CLIENTS, GET_ALL_PROFESSIONALS } from '../actions';
+import {
+	LOGIN_ADMIN,
+	GET_ALL_CLIENTS,
+	GET_ALL_PROFESSIONALS,
+	DISABLE_USER,
+	GET_USER,
+	DELETE_USER,
+	DELETE_REVIEW,
+} from '../actions';
 
 const initialState = {
+	admin: {
+		username: 'adminfixy',
+		password: 'aguantefixy',
+		isLoggedIn: false,
+	},
 	users: [],
 	clients: [],
 	professionals: [],
+	user: {},
 };
 
 const rootReducer = (state = initialState, action) => {
 	switch (action.type) {
+		case LOGIN_ADMIN:
+			if (
+				action.payload.username === state.admin.username &&
+				action.payload.password === state.admin.password
+			) {
+				return {
+					...state,
+					admin: {
+						...state.admin,
+						isLoggedIn: true,
+					},
+				};
+			} else {
+				return {
+					...state,
+					admin: {
+						...state.admin,
+						isLoggedIn: false,
+					},
+				};
+			}
 		case GET_ALL_CLIENTS:
 			return {
 				...state,
@@ -19,6 +54,23 @@ const rootReducer = (state = initialState, action) => {
 				...state,
 				professionals: action.payload,
 				users: [...state.clients, ...action.payload],
+			};
+		case GET_USER:
+			return {
+				...state,
+				user: action.payload,
+			};
+		case DISABLE_USER:
+			return {
+				...state,
+			};
+		case DELETE_USER:
+			return {
+				...state,
+			};
+		case DELETE_REVIEW:
+			return {
+				...state,
 			};
 		default:
 			return state;

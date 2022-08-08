@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Reports from './components/Admin/Reports/Reports';
 import Users from './components/Admin/Users/Users';
 import SideBar from './components/Admin/Dashboard/SideBar';
+import UserDetail from './components/Admin/UserDetail/UserDetail';
 
 function App() {
 	return (
@@ -33,6 +34,7 @@ function App() {
 									<Route path='dashboard' element={<Dashboard />} />
 									<Route path='login' element={<Login />} />
 									<Route path='users' element={<Users />} />
+									<Route path='users/:id' element={<UserDetail />} />
 									<Route path='reports' element={<Reports />} />
 								</Route>
 							</Route>

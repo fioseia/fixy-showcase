@@ -4,8 +4,8 @@
     flex: 1;
     padding: 10px;
     box-shadow: 11px 10px 0px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: 11px 10px 0px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 11px 10px 0px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 11px 10px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 11px 10px 0px 0px rgba(0,0,0,0.75);
     border-radius: 10px;
     border: 1px solid #666;
     min-height: max-content;

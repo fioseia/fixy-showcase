@@ -1,0 +1,92 @@
+.user {
+    display: flex;
+    width: 100%;
+}
+
+.userContainer {
+    flex: 6;
+}
+
+.top {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    width: 100%;
+}
+
+.left {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #666;
+    box-shadow: 11px 10px 0px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 11px 10px 0px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 11px 10px 0px 0px rgba(0,0,0,0.5);
+}
+
+.item {
+    display: flex;
+    gap: 20px;
+}
+
+.img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.itemTitle{
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.detailItem{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.itemKey{
+    font-weight: bold;
+    color: #493d8a;
+    margin-right: 5px;
+}
+
+.itemValue{
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.title{
+    font-size: 20px;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.reviewItem{
+    display: flex;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #493d8a;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reviewLeft{
+    gap: 10px;
+}
+
+button {
+    background-color: #493d8a;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+}
