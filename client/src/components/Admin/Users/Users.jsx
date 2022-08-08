@@ -64,6 +64,15 @@ function Users() {
                     rowsPerPageOptions={[15]}
                     disableSelectionOnClick
                     getRowId={(row) => row.id}
+                    sx={{
+                        color: 'white',
+                        boxShadow: 2,
+                        border: 2,
+                        borderColor: '#e0e0e0',
+                        '& .MuiDataGrid-cell:hover': {
+                          color: '#fff',
+                        },
+                      }}
                 />
             </div>
         </div>

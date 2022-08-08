@@ -1,9 +1,11 @@
 .users {
     display: flex;
+    background-color: #493d8a;
 }
 
 .usersContainer {
     flex: 6;
+    color: #fff;
 }
 
 .status {
