@@ -12,6 +12,8 @@ function UserDetail() {
 
     const user = useSelector(state => state.user)
 
+    console.log(user)
+
     const { id } = useParams()
 
     useEffect(() => {

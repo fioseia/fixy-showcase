@@ -6,9 +6,17 @@ import ReportIcon from '@mui/icons-material/Report';
 import LogoutIcon from '@mui/icons-material/Logout';
 import LogoFixy from '../../../assets/FIXy.svg'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux';
 
 
 function SideBar() {
+
+  const dispatch = useDispatch();
+
+  const handleLogout = () => {
+    dispatch({ type: 'LOGOUT' })
+  }
+
   return (
     <div className={styles.sideBar}>
       <div className={styles.top}>
@@ -37,7 +45,7 @@ function SideBar() {
                 <span>Reports</span>
             </li>
           </Link>
-          <Link to="/admin/login">
+          <Link onClick={handleLogout} to="/admin/login">
             <li>
                 <LogoutIcon className={styles.icon} />
                 <span>Logout</span>

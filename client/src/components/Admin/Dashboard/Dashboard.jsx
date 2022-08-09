@@ -2,8 +2,11 @@ import React from 'react'
 import SideBar from './SideBar'
 import styles from './Dashboard.module.css'
 import Widget from './Widget'
+import { useSelector } from 'react-redux';
 
 function Dashboard() {
+  const admin = useSelector((state) => state.admin);
+  console.log(admin);
   return (
     <>
       <div className={styles.dashboard}>

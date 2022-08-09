@@ -9,10 +9,10 @@ function Login() {
   const admin = useSelector(state => state.admin);
 
   useEffect(() => {
-    if (admin.isLoggedIn) {
+    if (Object.keys(admin).length > 0) {
       window.location.href = '/admin/dashboard';
     }
-  } , [admin.isLoggedIn]);
+  } , [admin]);
 
   console.log(admin)
 
@@ -29,7 +29,8 @@ function Login() {
     }
   }
 
-  const handleLogin = () => {
+  const handleLogin = (e) => {
+    e.preventDefault()
     dispatch(loginAdmin(username, password));
   }
 
@@ -40,7 +41,7 @@ function Login() {
         <img src={Logo} alt="logo-fixy" />
         <input className={styles.input} onChange={handleChange} value={username} name="username" type="text" placeholder='Username...' />
         <input className={styles.input} onChange={handleChange} value={password} type="password" name="password" placeholder='Password...' />
-        <button className={styles.button} onClick={handleLogin}>LOGIN</button>
+        <button className={styles.button} onClick={(e) => handleLogin(e)}>LOGIN</button>
       </div>
     </>
   )

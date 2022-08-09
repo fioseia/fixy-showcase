@@ -50,9 +50,9 @@
 }
 
 .icon {
-    font-size: 18px;
     padding: 5px;
-    background-color: blue;
+    color: #493d8a;
+    background-color: #fff;
     border-radius: 5px;
     align-self: flex-end;
 }

@@ -1,6 +1,7 @@
 .user {
     display: flex;
     width: 100%;
+    background-color: #333;
 }
 
 .userContainer {
@@ -16,9 +17,12 @@
 
 .left {
     flex: 1;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ddd;
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid #666;
+    border: 1px solid #ddd;
     box-shadow: 11px 10px 0px 0px rgba(0,0,0,0.5);
     -webkit-box-shadow: 11px 10px 0px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 11px 10px 0px 0px rgba(0,0,0,0.5);
@@ -38,7 +42,7 @@
 
 .itemTitle{
     margin-bottom: 10px;
-    color: #666;
+    color: #fff;
     font-size: 18px;
     font-weight: bold;
 }
@@ -50,7 +54,7 @@
 
 .itemKey{
     font-weight: bold;
-    color: #493d8a;
+    color: #796dfa;
     margin-right: 5px;
 }
 
@@ -62,14 +66,14 @@
 .title{
     font-size: 20px;
     font-weight: bold;
-    color: #666;
+    color: #fff;
     margin-bottom: 10px;
 }
 
 .reviewItem{
     display: flex;
     margin-bottom: 10px;
-    border-bottom: 1px solid #493d8a;
+    border-bottom: 1px solid #796dfa;
     justify-content: space-between;
     align-items: center;
 }
@@ -79,10 +83,11 @@
 }
 
 button {
-    background-color: #493d8a;
+    background-color: #796dfa;
     color: white;
     padding: 5px 12px;
     border-radius: 10px;
+    font-weight: bold;
     text-align: center;
     text-decoration: none;
     display: inline-block;

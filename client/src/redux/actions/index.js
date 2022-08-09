@@ -9,9 +9,20 @@ export const DELETE_USER = 'DELETE_USER';
 export const DELETE_REVIEW = 'DELETE_REVIEW';
 
 const API = 'https://fixy-backend.herokuapp.com/';
+// const API = 'http://localhost:3001/';
 
-export const loginAdmin = (username, password) => (dispatch) => {
-	dispatch({ type: LOGIN_ADMIN, payload: { username, password } });
+export const loginAdmin = (email, password) => (dispatch) => {
+	axios
+		.post(`${API}admin/login`, { email, password })
+		.then((res) => {
+			dispatch({
+				type: LOGIN_ADMIN,
+				payload: res.data,
+			});
+		})
+		.catch((err) => {
+			console.log(err);
+		});
 };
 
 export const getAllClients = () => (dispatch) => {

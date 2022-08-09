@@ -9,11 +9,7 @@ import {
 } from '../actions';
 
 const initialState = {
-	admin: {
-		username: 'adminfixy',
-		password: 'aguantefixy',
-		isLoggedIn: false,
-	},
+	admin: {},
 	users: [],
 	clients: [],
 	professionals: [],
@@ -23,26 +19,15 @@ const initialState = {
 const rootReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case LOGIN_ADMIN:
-			if (
-				action.payload.username === state.admin.username &&
-				action.payload.password === state.admin.password
-			) {
-				return {
-					...state,
-					admin: {
-						...state.admin,
-						isLoggedIn: true,
-					},
-				};
-			} else {
-				return {
-					...state,
-					admin: {
-						...state.admin,
-						isLoggedIn: false,
-					},
-				};
-			}
+			return {
+				...state,
+				admin: action.payload,
+			};
+		case 'LOGOUT':
+			return {
+				...state,
+				admin: {},
+			};
 		case GET_ALL_CLIENTS:
 			return {
 				...state,

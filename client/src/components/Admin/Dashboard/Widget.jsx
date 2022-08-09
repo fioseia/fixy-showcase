@@ -4,6 +4,9 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import PersonIcon from '@mui/icons-material/Person';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllClients, getAllProfessionals } from '../../../redux/actions';
+import ElectricalServicesIcon from '@mui/icons-material/ElectricalServices';
+import PropaneTankIcon from '@mui/icons-material/PropaneTank';
+import PlumbingIcon from '@mui/icons-material/Plumbing';
 import { Link } from 'react-router-dom';
 
 function Widget({type}) {
@@ -34,7 +37,7 @@ function Widget({type}) {
             data = {
                 title: 'CLIENTS',
                 value: clients.length,
-                link: 'See all clients',
+                link: '-',
                 icon: (<PersonIcon className={styles.icon} />)
             }
             break;
@@ -42,7 +45,7 @@ function Widget({type}) {
             data = {
                 title: 'PROFESSIONALS',
                 value: professionals.length,
-                link: 'See all professionals',
+                link: '-',
                 icon: (<PersonIcon className={styles.icon} />)
             }
             break;
@@ -50,24 +53,24 @@ function Widget({type}) {
             data = {
                 title: 'ELECTRICISTAS',
                 value: professionals.filter(professional => professional.profession === 'electricista').length,
-                link: 'See all electricistas',
-                icon: (<PersonIcon className={styles.icon} />)
+                link: '-',
+                icon: (<ElectricalServicesIcon className={styles.icon} />)
             }
             break;
         case 'gasista':
             data = {
                 title: 'GASISTAS',
                 value: professionals.filter(professional => professional.profession === 'gasista').length,
-                link: 'See all gasistas',
-                icon: (<PersonIcon className={styles.icon} />)
+                link: '-',
+                icon: (<PropaneTankIcon className={styles.icon} />)
             }
             break;
         case 'plomero':
             data = {
                 title: 'PLOMEROS',
                 value: professionals.filter(professional => professional.profession === 'plomero').length,
-                link: 'See all plomeros',
-                icon: (<PersonIcon className={styles.icon} />)
+                link: '-',
+                icon: (<PlumbingIcon className={styles.icon} />)
             }
             break;
         default:
