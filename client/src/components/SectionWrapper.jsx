@@ -17,7 +17,7 @@ const SectionWrapper = ({ title, description, showBtn, mockupImg, banner }) => {
 					{showBtn && (
 						<Button
 							assetUrl={android}
-							link='https://expo.dev/artifacts/eas/4oVQZAxtF2gStp5pQhwM96'
+							link='https://expo.dev/artifacts/eas/4oVQZAxtF2gStp5pQhwM96.apk'
 						/>
 					)}
 				</div>
