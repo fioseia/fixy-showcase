@@ -52,11 +52,7 @@ function UserDetail({ token }) {
                 <div className={styles.left}>
                   <h1 className={styles.title}>User Details {user.googleId}</h1>
                   <div className={styles.item}>
-                    <img
-                      src="https://picsum.photos/200/300"
-                      alt=""
-                      className={styles.img}
-                    />
+                    <img src={user.perfilPic} alt="" className={styles.img} />
                     <div className={styles.details}>
                       <h1 className={styles.itemTitle}>{user.name}</h1>
                       <div className={styles.detailItem}>
